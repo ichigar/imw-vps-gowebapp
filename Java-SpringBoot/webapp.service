@@ -1,0 +1,13 @@
+[Unit]
+Description=Aplicación web Java Spring Boot
+After=network.target
+
+[Service]
+User=usuario
+WorkingDirectory=/home/usuario/webapp
+ExecStart=/usr/bin/java -jar /home/usuario/webapp/target/webapp-0.0.1-SNAPSHOT.jar
+SuccessExitStatus=143
+Restart=always
+
+[Install]
+WantedBy=multi-user.target
