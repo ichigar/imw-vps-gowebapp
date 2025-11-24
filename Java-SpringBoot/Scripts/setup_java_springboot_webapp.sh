@@ -12,7 +12,7 @@ apt install -y openjdk-17-jdk git wget unzip
 mkdir -p "$APP_DIR"
 cd "$APP_DIR"
 
-wget -O webapp.zip "https://github.com/Nahuel472/imw-vps-apps/raw/main/Java-SpringBoot/webapp.zip"
+wget -O webapp.zip "https://github.com/Nahuel472/imw-vps-apps/raw/main/Java-SpringBoot/Modificaciones/webapp.zip"
 unzip -o webapp.zip
 cd webapp
 
