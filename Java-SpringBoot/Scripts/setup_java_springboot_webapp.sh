@@ -20,23 +20,23 @@ mkdir -p src/main/java/com/example/webapp/controller
 mkdir -p src/main/resources/templates
 
 wget -O src/main/java/com/example/webapp/controller/MainController.java \
-"https://github.com/Nahuel472/imw-vps-apps/raw/main/Java-SpringBoot/controller/MainController.java"
+"https://github.com/Nahuel472/imw-vps-apps/raw/main/Java-SpringBoot/Modificaciones/controller/MainController.java"
 
 wget -O src/main/resources/templates/index.html \
-"https://raw.githubusercontent.com/Nahuel472/imw-vps-apps/main/Java-SpringBoot/index.html"
+"https://raw.githubusercontent.com/Nahuel472/imw-vps-apps/main/Java-SpringBoot/Modificaciones/index.html"
 
 wget -O src/main/resources/templates/contacto.html \
-"https://raw.githubusercontent.com/Nahuel472/imw-vps-apps/main/Java-SpringBoot/contacto.html"
+"https://raw.githubusercontent.com/Nahuel472/imw-vps-apps/main/Java-SpringBoot/Modificaciones/contacto.html"
 
 wget -O src/main/resources/application.properties \
-"https://raw.githubusercontent.com/Nahuel472/imw-vps-apps/main/Java-SpringBoot/application.properties"
+"https://raw.githubusercontent.com/Nahuel472/imw-vps-apps/main/Java-SpringBoot/Modificaciones/application.properties"
 
 sed -i 's/^server\.port=.*/server.port=8081/' src/main/resources/application.properties
 
 ./mvnw clean package -DskipTests
 
 wget -O "$SERVICE_FILE" \
-"https://raw.githubusercontent.com/Nahuel472/imw-vps-apps/main/Java-SpringBoot/webapp.service"
+"https://raw.githubusercontent.com/Nahuel472/imw-vps-apps/main/Java-SpringBoot/Modificaciones/webapp.service"
 
 sed -i "s|User=.*|User=$APP_USER|" "$SERVICE_FILE"
 sed -i "s|WorkingDirectory=.*|WorkingDirectory=$APP_DIR/webapp|" "$SERVICE_FILE"
